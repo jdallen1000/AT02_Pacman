@@ -22,7 +22,7 @@ public class OverviewMap : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-            //Get current State
+            //Get current State of active object
             bool currentState = UImap.activeSelf;
 
             //Flip it
