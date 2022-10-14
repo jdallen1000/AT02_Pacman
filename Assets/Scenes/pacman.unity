@@ -6675,11 +6675,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 85ab5bfaf3fe503468f6992be280d1e9, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 85ab5bfaf3fe503468f6992be280d1e9, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 85ab5bfaf3fe503468f6992be280d1e9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -10916,6 +10916,12 @@ MonoBehaviour:
   powerPelletClip: {fileID: 8300000, guid: 955db34b5abec7f45a18340589c5e1bf, type: 3}
   bonusItemClip: {fileID: 8300000, guid: 7cebe390eff71b546afbdd00ed5ea779, type: 3}
   eatGhostClip: {fileID: 8300000, guid: 63b161164da9f9d42b3fd0b94b680894, type: 3}
+  ghosts:
+  - {fileID: 1930594673}
+  - {fileID: 1676641517}
+  - {fileID: 943200290}
+  - {fileID: 225854909}
+  fire: {fileID: 2100000, guid: e5b8074a713df384c8a82e806f484062, type: 2}
 --- !u!4 &1303003788
 Transform:
   m_ObjectHideFlags: 0
@@ -13604,11 +13610,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 85ab5bfaf3fe503468f6992be280d1e9, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 85ab5bfaf3fe503468f6992be280d1e9, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 85ab5bfaf3fe503468f6992be280d1e9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

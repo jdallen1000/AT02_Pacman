@@ -44,6 +44,10 @@ public class GameManager : MonoBehaviour
     /// <summary>
     /// Create necessary references.
     /// </summary>
+    /// 
+
+    public GameObject[] ghosts;
+    public Material fire;
     private void Awake()
     {
         //Set singleton
@@ -159,6 +163,13 @@ public class GameManager : MonoBehaviour
             Event_PickUpPowerPellet.Invoke();
             PowerUpTimer = 0;
             aSrc.PlayOneShot(powerPelletClip);
+            //change ghost material
+
+            //get array of ghosts
+            for (int i = 0; i < ghosts.Length; i++)
+            {
+                ghosts[i].GetComponent<Renderer>().material = fire;
+            }//cycle through changing each material
         }
 
         if (type != 2)
