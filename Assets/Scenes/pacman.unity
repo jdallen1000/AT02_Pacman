@@ -2311,6 +2311,8 @@ MonoBehaviour:
   fleeMaterial: {fileID: 2100000, guid: 45887d5376cfed8448455c86cdeaa7b7, type: 2}
   respawnMaterial: {fileID: 2100000, guid: e5b8074a713df384c8a82e806f484062, type: 2}
   GhostRenderer: {fileID: 1930594675}
+  ghosts: []
+  Normal: {fileID: 2100000, guid: cc4ae0d692ac4d145b1fb33ecb71f607, type: 2}
 --- !u!136 &218600749
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2464,6 +2466,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 85ab5bfaf3fe503468f6992be280d1e9, type: 3}
       propertyPath: m_Name
       value: Ghost Robot Pacman (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 85ab5bfaf3fe503468f6992be280d1e9, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85ab5bfaf3fe503468f6992be280d1e9, type: 3}
@@ -6705,6 +6711,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Ghost Robot Pacman '
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 85ab5bfaf3fe503468f6992be280d1e9, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85ab5bfaf3fe503468f6992be280d1e9, type: 3}
 --- !u!1 &760249030
@@ -8185,6 +8195,8 @@ MonoBehaviour:
   fleeMaterial: {fileID: 2100000, guid: 45887d5376cfed8448455c86cdeaa7b7, type: 2}
   respawnMaterial: {fileID: 2100000, guid: e5b8074a713df384c8a82e806f484062, type: 2}
   GhostRenderer: {fileID: 225854911}
+  ghosts: []
+  Normal: {fileID: 2100000, guid: cc4ae0d692ac4d145b1fb33ecb71f607, type: 2}
   offset: {x: 0, y: 0, z: 3}
 --- !u!136 &927471653
 CapsuleCollider:
@@ -10256,17 +10268,17 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0.8448516, b: 0, a: 1}
-  m_Intensity: 13
-  m_Range: 10
+  m_Intensity: 10
+  m_Range: 5
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
+    m_Strength: 0.243
+    m_Bias: 0
     m_NormalBias: 0.4
     m_NearPlane: 0.2
     m_CullingMatrixOverride:
@@ -10921,7 +10933,9 @@ MonoBehaviour:
   - {fileID: 1676641517}
   - {fileID: 943200290}
   - {fileID: 225854909}
-  fire: {fileID: 2100000, guid: e5b8074a713df384c8a82e806f484062, type: 2}
+  Flee: {fileID: 2100000, guid: 45887d5376cfed8448455c86cdeaa7b7, type: 2}
+  Respawn: {fileID: 2100000, guid: e5b8074a713df384c8a82e806f484062, type: 2}
+  Normal: {fileID: 2100000, guid: cc4ae0d692ac4d145b1fb33ecb71f607, type: 2}
 --- !u!4 &1303003788
 Transform:
   m_ObjectHideFlags: 0
@@ -13640,6 +13654,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ghost Robot Pacman (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 85ab5bfaf3fe503468f6992be280d1e9, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85ab5bfaf3fe503468f6992be280d1e9, type: 3}
 --- !u!1001 &1752383744
@@ -13716,6 +13734,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 85ab5bfaf3fe503468f6992be280d1e9, type: 3}
       propertyPath: m_Name
       value: Ghost Robot Pacman (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 85ab5bfaf3fe503468f6992be280d1e9, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85ab5bfaf3fe503468f6992be280d1e9, type: 3}
@@ -15564,6 +15586,8 @@ MonoBehaviour:
   fleeMaterial: {fileID: 2100000, guid: 45887d5376cfed8448455c86cdeaa7b7, type: 2}
   respawnMaterial: {fileID: 2100000, guid: e5b8074a713df384c8a82e806f484062, type: 2}
   GhostRenderer: {fileID: 943200292}
+  ghosts: []
+  Normal: {fileID: 2100000, guid: cc4ae0d692ac4d145b1fb33ecb71f607, type: 2}
   offset: {x: 3, y: 0, z: 0}
 --- !u!136 &1905008569
 CapsuleCollider:
@@ -16112,6 +16136,8 @@ MonoBehaviour:
   fleeMaterial: {fileID: 2100000, guid: 45887d5376cfed8448455c86cdeaa7b7, type: 2}
   respawnMaterial: {fileID: 2100000, guid: e5b8074a713df384c8a82e806f484062, type: 2}
   GhostRenderer: {fileID: 1676641520}
+  ghosts: []
+  Normal: {fileID: 2100000, guid: cc4ae0d692ac4d145b1fb33ecb71f607, type: 2}
   behaviourSwitchTime: {x: 5, y: 20}
 --- !u!136 &1959092549
 CapsuleCollider:

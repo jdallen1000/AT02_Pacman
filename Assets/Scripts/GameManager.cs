@@ -47,7 +47,10 @@ public class GameManager : MonoBehaviour
     /// 
 
     public GameObject[] ghosts;
-    public Material fire;
+    public Material Flee;
+    public Material Respawn;
+    public Material Normal;
+    private float timeLeft = 5;
     private void Awake()
     {
         //Set singleton
@@ -123,15 +126,25 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         //Active power up timer
-        if(PowerUpTimer > -1)
+        if (PowerUpTimer > -1)
         {
             PowerUpTimer += Time.deltaTime;
-            if(PowerUpTimer > powerUpTime)  //Power up timer finished
+
+            if (PowerUpTimer > powerUpTime)  //Power up timer finished
             {
+                //get array of ghosts
+                for (int i = 0; i < ghosts.Length; i++)
+                {
+                    ghosts[i].GetComponent<Renderer>().material = Normal;
+
+                }//cycle through changing each material
                 Event_EndPowerUp.Invoke();
                 PowerUpTimer = -1;
             }
+            
+
         }
+        
     }
 
     /// <summary>
@@ -168,7 +181,8 @@ public class GameManager : MonoBehaviour
             //get array of ghosts
             for (int i = 0; i < ghosts.Length; i++)
             {
-                ghosts[i].GetComponent<Renderer>().material = fire;
+                ghosts[i].GetComponent<Renderer>().material = Flee;
+            
             }//cycle through changing each material
         }
 
@@ -230,6 +244,11 @@ public class GameManager : MonoBehaviour
         aSrc.PlayOneShot(eatGhostClip);
         //Respawn
         ghost.SetState(ghost.RespawnState);
+        //get array of ghosts
+        //for (int i = 0; i < ghosts.Length; i++)
+        //{
+        //     ghosts[i].GetComponent<Renderer>().material = Normal;
+        // }//cycle through changing each material
     }
 
     /// <summary>
@@ -268,4 +287,5 @@ public class GameManager : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(ghostSpawnBounds.center, ghostSpawnBounds.size);
     }
-}
+   
+   }

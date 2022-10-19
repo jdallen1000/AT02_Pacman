@@ -19,6 +19,7 @@ public abstract class Ghost : MonoBehaviour
     public GhostState_Respawn RespawnState { get; private set; }
     public GhostState CurrentState { get; private set; }
 
+
     /// <summary>
     /// Creates necessary references.
     /// </summary>

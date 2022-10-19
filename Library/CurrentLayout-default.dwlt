@@ -280,7 +280,7 @@ MonoBehaviour:
   - {fileID: 19}
   - {fileID: 12}
   m_Selected: 0
-  m_LastSelected: 2
+  m_LastSelected: 1
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -423,23 +423,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 80420000
-      m_LastClickedID: 17024
-      m_ExpandedIDs: 70fbffff223e0000764000004443000082430000
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: bc34ffff7e44ffff6afbffff583d00006c3d0000243e0000904100009a410000ae410000f841000084430000c6f2000000f3000008f3000024f30000fc250100502801001e2b01005c2b0100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: Ghost Robot Pacman (1)
+        m_OriginalName: Ghost Robot Pacman (1)
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: 76378
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 8}
       m_SearchString: 
@@ -485,9 +485,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0, y: 2.8000002, z: 10}
+    m_Target: {x: 0, y: 1, z: 14.000001}
     speed: 2
-    m_Value: {x: 0, y: 2.8000002, z: 10}
+    m_Value: {x: 0, y: 1, z: 14.000001}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -534,13 +534,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.31
   m_Rotation:
-    m_Target: {x: 0.37985328, y: -0.117461324, z: 0.048695307, w: 0.91626704}
+    m_Target: {x: 0.32371795, y: 0.04255929, z: -0.0145736495, w: 0.94509256}
     speed: 2
-    m_Value: {x: 0.37985286, y: -0.1174612, z: 0.048695255, w: 0.9162661}
+    m_Value: {x: 0.3237152, y: 0.042558927, z: -0.014573527, w: 0.9450846}
   m_Size:
-    m_Target: 2.7635
+    m_Target: 8.752038
     speed: 2
-    m_Value: 2.7635
+    m_Value: 8.752038
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -558,7 +558,7 @@ MonoBehaviour:
     m_FarClip: 10000
     m_DynamicClip: 1
     m_OcclusionCulling: 0
-  m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+  m_LastSceneViewRotation: {x: 0.32371795, y: 0.04255929, z: -0.0145736495, w: 0.94509256}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
@@ -600,7 +600,7 @@ MonoBehaviour:
     m_ReferencingInstanceIDs: 
     m_SceneHandles: 
     m_ShowAllHits: 0
-    m_SkipHidden: 0
+    m_SkipHidden: 1
     m_SearchArea: 1
     m_Folders:
     - Assets/Scripts
@@ -616,9 +616,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: c6440000
-    m_LastClickedID: 17606
-    m_ExpandedIDs: 00000000c6440000c8440000ca440000cc44000000ca9a3b
+    m_SelectedIDs: c8440000
+    m_LastClickedID: 17608
+    m_ExpandedIDs: 00000000c8440000ca440000cc440000ce44000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -644,9 +644,9 @@ MonoBehaviour:
       m_ResourceFile: 
   m_AssetTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
+    m_SelectedIDs: 402b0100
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000c6440000c8440000ca440000cc440000
+    m_ExpandedIDs: ffffffff00000000c8440000ca440000cc440000ce440000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -674,7 +674,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c62300006e44000054970000fa430000e243000000000000f2430000
+    m_ExpandedInstanceIDs: c62300006e44000054970000fa430000e243000000000000f24300000244000004440000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -700,7 +700,7 @@ MonoBehaviour:
     m_NewAssetIndexInList: -1
     m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 64
-  m_SkipHiddenPackages: 0
+  m_SkipHiddenPackages: 1
   m_DirectoriesAreaWidth: 207
 --- !u!114 &17
 MonoBehaviour:
@@ -784,10 +784,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1373
+    x: 1524
     y: 73
-    width: 546
-    height: 966
+    width: 395
+    height: 926
   m_ViewDataDictionary: {fileID: 0}
 --- !u!114 &20
 MonoBehaviour:
