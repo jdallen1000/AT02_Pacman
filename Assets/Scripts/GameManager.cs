@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Transform bonusItemSpawn;
     [SerializeField] private Bounds ghostSpawnBounds;
     [SerializeField] private GameObject endPanel;
+    [SerializeField] private GameObject endPanelvictory;
     [SerializeField] private AudioClip pelletClip;
     [SerializeField] private AudioClip powerPelletClip;
     [SerializeField] private AudioClip bonusItemClip;
@@ -44,6 +45,13 @@ public class GameManager : MonoBehaviour
     /// <summary>
     /// Create necessary references.
     /// </summary>
+    /// 
+
+    public GameObject[] ghosts;
+    public Material Flee;
+    public Material Respawn;
+    public Material Normal;
+    private float timeLeft = 5;
     private void Awake()
     {
         //Set singleton
@@ -71,6 +79,8 @@ public class GameManager : MonoBehaviour
         //Count pellets
         totalPellets = GameObject.FindGameObjectsWithTag("Pellet").Length;
         totalPellets += GameObject.FindGameObjectsWithTag("Power Pellet").Length;
+
+        endPanelvictory.SetActive(false);
     }
 
     /// <summary>
@@ -79,7 +89,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {        
         //Assign delegates/events
-        Event_GameVictory += ToggleEndPanel;
+        Event_GameVictory += ToggleEndPanelVictory;
         Delegate_GameOver += ToggleEndPanel;
         //Disable bonus item
         if (bonusItem != null)
@@ -119,15 +129,25 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         //Active power up timer
-        if(PowerUpTimer > -1)
+        if (PowerUpTimer > -1)
         {
             PowerUpTimer += Time.deltaTime;
-            if(PowerUpTimer > powerUpTime)  //Power up timer finished
+
+            if (PowerUpTimer > powerUpTime)  //Power up timer finished
             {
+                //get array of ghosts
+                for (int i = 0; i < ghosts.Length; i++)
+                {
+                    ghosts[i].GetComponent<Renderer>().material = Normal;
+
+                }//cycle through changing each material
                 Event_EndPowerUp.Invoke();
                 PowerUpTimer = -1;
             }
+            
+
         }
+        
     }
 
     /// <summary>
@@ -159,6 +179,14 @@ public class GameManager : MonoBehaviour
             Event_PickUpPowerPellet.Invoke();
             PowerUpTimer = 0;
             aSrc.PlayOneShot(powerPelletClip);
+            //change ghost material
+
+            //get array of ghosts
+            for (int i = 0; i < ghosts.Length; i++)
+            {
+                ghosts[i].GetComponent<Renderer>().material = Flee;
+            
+            }//cycle through changing each material
         }
 
         if (type != 2)
@@ -219,6 +247,7 @@ public class GameManager : MonoBehaviour
         aSrc.PlayOneShot(eatGhostClip);
         //Respawn
         ghost.SetState(ghost.RespawnState);
+
     }
 
     /// <summary>
@@ -252,9 +281,24 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void ToggleEndPanelVictory() // victory
+    {
+        if (endPanelvictory.activeSelf == false)
+        {
+            endPanelvictory.SetActive(true);
+        }
+        else
+        {
+            endPanelvictory.SetActive(false);
+        }
+    }
+
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(ghostSpawnBounds.center, ghostSpawnBounds.size);
     }
-}
+   
+
+
+   }
